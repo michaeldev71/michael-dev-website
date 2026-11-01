@@ -1,0 +1,11 @@
+/* Tailwind v3 utilities only; Preflight is disabled in tailwind.config.js. */
+@tailwind utilities;
+
+/* Regras próprias usadas pela Hero aprovada no Stitch. */
+#md-header-scope .font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+#md-header-scope .hero-bg-gradient {
+  background: radial-gradient(circle at 75% 35%, #162a66 0%, #070f26 55%, #050a18 100%);
+}

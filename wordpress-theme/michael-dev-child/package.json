@@ -1,0 +1,10 @@
+{
+  "name": "michael-dev-child-theme-assets",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i assets/css/header.src.css -o assets/css/header.min.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

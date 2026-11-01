@@ -1,0 +1,22 @@
+
+# Dependências instaladas localmente
+node_modules/
+
+# Configurações privadas
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários e de sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*.bak
+*.backup
+*.zip
+
+# Arquivos locais do editor
+.vscode/*
+!.vscode/extensions.json
