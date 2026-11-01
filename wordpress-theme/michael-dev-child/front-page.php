@@ -64,17 +64,17 @@ get_header();
                 class="hidden md:col-span-2 lg:col-span-1 w-full flex-col gap-4 border-t border-slate-800/80 pt-4 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-x-8 lg:border-0 lg:pt-0"
             >
                 <nav aria-label="Navegação Principal" class="flex flex-col gap-2 text-sm font-medium text-slate-300 lg:flex-row lg:items-center lg:justify-center lg:gap-8 lg:min-w-0">
-                    <a class="text-white hover:text-sky-400 transition-colors py-1 border-b-2 border-blue-500 font-semibold" href="<?php echo esc_url( home_url( '/#inicio' ) ); ?>">Início</a>
-                    <a class="hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#servicos' ) ); ?>">Serviços</a>
-                    <a class="hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#portfolio' ) ); ?>">Portfólio</a>
-                    <a class="hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#blog' ) ); ?>">Blog</a>
-                    <a class="hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#sobre' ) ); ?>">Sobre</a>
-                    <a class="hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#contato' ) ); ?>">Contato</a>
+                    <a class="text-white hover:text-sky-400 transition-colors py-1 border-b-2 border-x-0 border-t-0 border-solid border-blue-500 font-semibold" href="<?php echo esc_url( home_url( '/#inicio' ) ); ?>">Início</a>
+                    <a class="text-slate-300 hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#servicos' ) ); ?>">Serviços</a>
+                    <a class="text-slate-300 hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#portfolio' ) ); ?>">Portfólio</a>
+                    <a class="text-slate-300 hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#blog' ) ); ?>">Blog</a>
+                    <a class="text-slate-300 hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#sobre' ) ); ?>">Sobre</a>
+                    <a class="text-slate-300 hover:text-sky-400 transition-colors py-1" href="<?php echo esc_url( home_url( '/#contato' ) ); ?>">Contato</a>
                 </nav>
 
                 <div class="flex items-center gap-3 lg:justify-self-end">
                     <a
-                        class="inline-flex items-center gap-2 px-3 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium text-sky-200 border border-sky-400/30 bg-sky-500/10 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all duration-300 shadow-sm"
+                        class="inline-flex items-center gap-2 px-3 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium text-sky-200 border border-solid border-sky-400/30 bg-sky-500/10 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all duration-300 shadow-sm"
                         data-purpose="header-cta-whatsapp"
                         href="<?php echo esc_url( 'https://wa.me/' ); ?>"
                         rel="noopener noreferrer"
@@ -200,6 +200,8 @@ get_header();
   </div>
 </section>
 <!-- END: HeroSection -->
+
+    <?php get_template_part( 'template-parts/home/services' ); ?>
 </main>
 </div>
 

@@ -2,10 +2,54 @@
 @tailwind utilities;
 
 /* Regras próprias usadas pela Hero aprovada no Stitch. */
+#md-header-scope [data-purpose="site-logo"] > div:first-child {
+  box-sizing: border-box;
+  --tw-gradient-from-position: 0%;
+  --tw-gradient-to-position: 100%;
+}
+
 #md-header-scope .font-handwriting {
   font-family: 'Caveat', cursive;
 }
 
+#md-header-scope header {
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
+}
+
 #md-header-scope .hero-bg-gradient {
+  /* Tailwind transform and filter utilities need defaults when Preflight is off. */
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
   background: radial-gradient(circle at 75% 35%, #162a66 0%, #070f26 55%, #050a18 100%);
 }
