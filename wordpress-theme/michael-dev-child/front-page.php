@@ -76,7 +76,7 @@ get_header();
                     <a
                         class="inline-flex items-center gap-2 px-3 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium text-sky-200 border border-solid border-sky-400/30 bg-sky-500/10 hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all duration-300 shadow-sm"
                         data-purpose="header-cta-whatsapp"
-                        href="<?php echo esc_url( 'https://wa.me/' ); ?>"
+                        href="<?php echo esc_url( 'https://wa.me/5511940689664?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20desejo%20saber%20mais%20sobre%20seus%20servi%C3%A7os' ); ?>"
                         rel="noopener noreferrer"
                         target="_blank"
                     >
@@ -120,7 +120,7 @@ get_header();
         <div class="flex flex-wrap items-center gap-4 mb-12">
           <a
             class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5"
-            href="https://wa.me/"
+            href="<?php echo esc_url( 'https://wa.me/5511940689664?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20desejo%20saber%20mais%20sobre%20seus%20servi%C3%A7os' ); ?>"
             rel="noopener noreferrer"
             target="_blank">
             <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
@@ -129,14 +129,14 @@ get_header();
             <span>Falar no WhatsApp</span>
           </a>
           <a
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium text-sm transition-all hover:border-slate-500"
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-solid border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-medium text-sm transition-all hover:border-slate-500"
             href="#servicos">
             <span>Conheça meus serviços</span>
             <span class="text-blue-400 font-bold">→</span>
           </a>
         </div>
         <!-- 3 Bottom Value Badges -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-0 border-t border-solid border-slate-800/80 w-full">
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
@@ -202,6 +202,7 @@ get_header();
 <!-- END: HeroSection -->
 
     <?php get_template_part( 'template-parts/home/services' ); ?>
+    <?php get_template_part( 'template-parts/home/stats' ); ?>
 </main>
 </div>
 
