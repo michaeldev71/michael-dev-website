@@ -45,7 +45,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-1">
                             <h3 class="text-lg font-bold text-slate-900">Bolas Bellca</h3>
-                            <a class="text-slate-400 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://bolasbellca.com.br/' ); ?>" title="Abrir projeto">
+                            <a class="text-slate-600 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://bolasbellca.com.br/' ); ?>" title="Abrir projeto" aria-label="Abrir projeto Bolas Bellca">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
                                     <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                                 </svg>
@@ -73,7 +73,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-1">
                             <h3 class="text-lg font-bold text-slate-900">Parente Assessoria Italiana</h3>
-                            <a class="text-slate-400 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://parenteassessoriaitaliana.com.br/' ); ?>" title="Abrir projeto">
+                            <a class="text-slate-600 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://parenteassessoriaitaliana.com.br/' ); ?>" title="Abrir projeto" aria-label="Abrir projeto Parente Assessoria Italiana">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
                                     <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                                 </svg>
@@ -101,7 +101,7 @@
                     <div>
                         <div class="flex items-center justify-between mb-1">
                             <h3 class="text-lg font-bold text-slate-900">Reparação Automotiva</h3>
-                            <a class="text-slate-400 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://reparacaoautomotiva.com.br/edicoes/' ); ?>" title="Abrir projeto">
+                            <a class="text-slate-600 hover:text-blue-600 transition-colors" href="<?php echo esc_url( 'https://reparacaoautomotiva.com.br/edicoes/' ); ?>" title="Abrir projeto" aria-label="Abrir projeto Reparação Automotiva">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
                                     <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                                 </svg>

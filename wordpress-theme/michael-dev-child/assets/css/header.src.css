@@ -106,3 +106,31 @@
   background-color: #08112d;
   background-image: radial-gradient(ellipse at bottom right, rgba(37, 99, 235, 0.25) 0%, rgba(7, 15, 38, 0.95) 70%);
 }
+
+/* Foco de teclado visível apenas nos controles da Home. */
+#md-header-scope a:focus-visible,
+#md-header-scope button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Deixa as seções ancoradas visíveis sob o Header sticky. */
+#md-header-scope #inicio,
+#md-header-scope #servicos,
+#md-header-scope #portfolio,
+#md-header-scope #blog,
+#md-header-scope #sobre,
+#md-header-scope #contato {
+  scroll-margin-top: 9rem;
+}
+
+@media (min-width: 1024px) {
+  #md-header-scope #inicio,
+  #md-header-scope #servicos,
+  #md-header-scope #portfolio,
+  #md-header-scope #blog,
+  #md-header-scope #sobre,
+  #md-header-scope #contato {
+    scroll-margin-top: 6rem;
+  }
+}

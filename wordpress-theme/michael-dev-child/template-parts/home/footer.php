@@ -71,12 +71,12 @@
         </div>
 
         <!-- Copyright e informações legais. -->
-        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-            <p class="text-slate-500">© <?php echo esc_html( wp_date( 'Y' ) ); ?> Michael DEV. Todos os direitos reservados.</p>
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+            <p class="text-slate-400">© <?php echo esc_html( wp_date( 'Y' ) ); ?> Michael DEV. Todos os direitos reservados.</p>
             <div class="flex items-center gap-2">
-                <span class="text-slate-500">Política de Privacidade</span>
+                <span class="text-slate-400">Política de Privacidade</span>
                 <span aria-hidden="true">|</span>
-                <span class="text-slate-500">Termos de Uso</span>
+                <span class="text-slate-400">Termos de Uso</span>
             </div>
         </div>
     </div>
