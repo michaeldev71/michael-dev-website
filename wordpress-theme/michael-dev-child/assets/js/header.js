@@ -1,41 +1,65 @@
-"use strict";
+(() => {
+    "use strict";
 
-const menuButton = document.querySelector('[aria-controls="header-menu-panel"]');
-const menuPanel = document.getElementById("header-menu-panel");
-const desktopBreakpoint = window.matchMedia("(min-width: 1024px)");
+    const initializeMobileMenu = () => {
+        const menuButton = document.querySelector('[aria-controls="header-menu-panel"]');
+        const menuPanel = document.getElementById("header-menu-panel");
 
-if (menuButton && menuPanel) {
-    const setMenuOpen = (isOpen, returnFocus = false) => {
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
-        menuPanel.classList.toggle("hidden", !isOpen);
-        menuPanel.classList.toggle("flex", isOpen);
+        if (!menuButton || !menuPanel) {
+            return;
+        }
 
-        if (returnFocus) {
-            menuButton.focus();
+        const setMenuOpen = (isOpen, returnFocus = false) => {
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+            menuPanel.classList.toggle("hidden", !isOpen);
+            menuPanel.classList.toggle("flex", isOpen);
+
+            if (returnFocus) {
+                menuButton.focus();
+            }
+        };
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            setMenuOpen(!isOpen);
+        });
+
+        menuPanel.querySelectorAll("nav a").forEach((link) => {
+            link.addEventListener("click", () => setMenuOpen(false));
+        });
+
+        document.addEventListener("keydown", (event) => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+
+            if (event.key === "Escape" && isOpen) {
+                setMenuOpen(false, true);
+            }
+        });
+
+        if (typeof window.matchMedia === "function") {
+            try {
+                const desktopBreakpoint = window.matchMedia("(min-width: 1024px)");
+                const closeMenuOnDesktop = (event) => {
+                    if (event.matches) {
+                        setMenuOpen(false);
+                    }
+                };
+
+                if (typeof desktopBreakpoint.addEventListener === "function") {
+                    desktopBreakpoint.addEventListener("change", closeMenuOnDesktop);
+                } else if (typeof desktopBreakpoint.addListener === "function") {
+                    desktopBreakpoint.addListener(closeMenuOnDesktop);
+                }
+            } catch (error) {
+                // A falha no controle do breakpoint não deve impedir o uso do menu.
+            }
         }
     };
 
-    menuButton.addEventListener("click", () => {
-        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-        setMenuOpen(!isOpen);
-    });
-
-    menuPanel.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => setMenuOpen(false));
-    });
-
-    document.addEventListener("keydown", (event) => {
-        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-
-        if (event.key === "Escape" && isOpen) {
-            setMenuOpen(false, true);
-        }
-    });
-
-    desktopBreakpoint.addEventListener("change", (event) => {
-        if (event.matches) {
-            setMenuOpen(false);
-        }
-    });
-}
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeMobileMenu, { once: true });
+    } else {
+        initializeMobileMenu();
+    }
+})();
