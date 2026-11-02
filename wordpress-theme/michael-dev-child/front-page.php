@@ -208,6 +208,7 @@ get_header();
     <?php get_template_part( 'template-parts/home/about' ); ?>
     <?php get_template_part( 'template-parts/home/contact-cta' ); ?>
 </main>
+    <?php get_template_part( 'template-parts/home/footer' ); ?>
 </div>
 
 <?php
