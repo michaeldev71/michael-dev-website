@@ -39,35 +39,6 @@ if ( $blog_query->have_posts() ) {
 
 wp_reset_postdata();
 
-if ( empty( $blog_items ) ) {
-    /* Demonstração temporária para o WordPress de desenvolvimento; revisar antes da publicação definitiva. */
-    $blog_items = array(
-        array(
-            'category' => 'Criação de Sites',
-            'title'    => 'Como criar um site profissional: guia simples para iniciantes',
-            'url'      => 'https://michaeldev.com.br/como-criar-um-site-profissional/',
-            'excerpt'  => 'Um guia sobre objetivos do site, organização de conteúdo, experiência em dispositivos móveis e os pontos técnicos básicos para começar.',
-            'date'     => '',
-            'image'    => get_stylesheet_directory_uri() . '/assets/images/como-criar-um-site-profissional-para-uma-empresa-michael-dev.webp',
-        ),
-        array(
-            'category' => 'Automação e IA',
-            'title'    => 'IA no negócio: vale a pena usar em 2026?',
-            'url'      => 'https://michaeldev.com.br/vale-a-pena-usar-ia-no-negocio/',
-            'excerpt'  => 'O artigo aborda usos de IA para automatizar tarefas, apoiar a criação de conteúdo e organizar processos, além de aplicar a tecnologia com critério.',
-            'date'     => '',
-            'image'    => get_stylesheet_directory_uri() . '/assets/images/Empresario-usando-notebook-com-interface-de-IA-na-tela-michael-dev.webp',
-        ),
-        array(
-            'category' => 'Ferramentas e Tecnologia',
-            'title'    => 'Setup ideal para desenvolvedor iniciante em 2026',
-            'url'      => 'https://michaeldev.com.br/setup-ideal-desenvolvedor-iniciante/',
-            'excerpt'  => 'Artigo sobre um setup ideal para quem está começando no desenvolvimento em 2026.',
-            'date'     => '',
-            'image'    => get_stylesheet_directory_uri() . '/assets/images/Mesa-simples-com-notebook-e-ambiente-limpo-michael-dev-.webp',
-        ),
-    );
-}
 ?>
 
 <!-- Blog e conteúdo recente. -->
@@ -94,7 +65,8 @@ if ( empty( $blog_items ) ) {
             </div>
         </div>
 
-        <!-- Cards dinâmicos ou demonstração temporária, sem misturar as fontes. -->
+        <?php if ( ! empty( $blog_items ) ) : ?>
+        <!-- Cards dos artigos publicados. -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <?php foreach ( $blog_items as $blog_item ) : ?>
                 <article class="bg-white rounded-2xl border border-solid border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
@@ -118,7 +90,7 @@ if ( empty( $blog_items ) ) {
                                 <a href="<?php echo esc_url( $blog_item['url'] ); ?>"><?php echo esc_html( $blog_item['title'] ); ?></a>
                             </h3>
                             <?php if ( ! empty( $blog_item['date'] ) ) : ?>
-                                <p class="text-slate-400 text-xs mb-2"><?php echo esc_html( $blog_item['date'] ); ?></p>
+                                <p class="text-slate-600 text-xs mb-2"><?php echo esc_html( $blog_item['date'] ); ?></p>
                             <?php endif; ?>
                             <p class="text-slate-600 text-sm leading-relaxed mb-6">
                                 <?php echo esc_html( $blog_item['excerpt'] ); ?>
@@ -131,5 +103,6 @@ if ( empty( $blog_items ) ) {
                 </article>
             <?php endforeach; ?>
         </div>
+        <?php endif; ?>
     </div>
 </section>
