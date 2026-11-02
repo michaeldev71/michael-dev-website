@@ -105,7 +105,7 @@ get_header();
       <!-- Hero Left Column: Copy & CTAs -->
       <div class="lg:col-span-7 flex flex-col items-start">
         <!-- Badge -->
-        <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-500/10 border border-sky-400/30 text-sky-300 mb-6 tracking-wide">
+        <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-sky-500/10 border border-solid border-sky-400/30 text-sky-300 mb-6 tracking-wide">
           Sites e Soluções Digitais
         </span>
         <!-- Main Heading -->
@@ -138,7 +138,7 @@ get_header();
         <!-- 3 Bottom Value Badges -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-0 border-t border-solid border-slate-800/80 w-full">
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-solid border-blue-500/20 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
               </svg>
@@ -146,7 +146,7 @@ get_header();
             <span class="text-xs font-medium text-slate-300 leading-tight">Atendimento personalizado</span>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-solid border-blue-500/20 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
               </svg>
@@ -154,7 +154,7 @@ get_header();
             <span class="text-xs font-medium text-slate-300 leading-tight">Soluções sob medida</span>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-solid border-blue-500/20 flex items-center justify-center shrink-0">
               <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                 <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                 <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -203,6 +203,7 @@ get_header();
 
     <?php get_template_part( 'template-parts/home/services' ); ?>
     <?php get_template_part( 'template-parts/home/stats' ); ?>
+    <?php get_template_part( 'template-parts/home/portfolio' ); ?>
 </main>
 </div>
 

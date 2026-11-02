@@ -53,3 +53,14 @@
   --tw-backdrop-sepia: ;
   background: radial-gradient(circle at 75% 35%, #162a66 0%, #070f26 55%, #050a18 100%);
 }
+
+#md-header-scope [data-purpose="portfolio-section"] img {
+  /* Defaults normally supplied by Preflight for Tailwind transform utilities. */
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+}
