@@ -8,6 +8,12 @@
   --tw-gradient-to-position: 100%;
 }
 
+#md-header-scope [data-purpose="footer-logo"] > div:first-child {
+  box-sizing: border-box;
+  --tw-gradient-from-position: 0%;
+  --tw-gradient-to-position: 100%;
+}
+
 #md-header-scope .font-handwriting {
   font-family: 'Caveat', cursive;
 }
