@@ -75,3 +75,23 @@
   --tw-scale-x: 1;
   --tw-scale-y: 1;
 }
+
+#md-header-scope [data-purpose="about-section"] {
+  /* Defaults normally supplied by Preflight for transform and filter utilities. */
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+}
