@@ -206,6 +206,7 @@ get_header();
     <?php get_template_part( 'template-parts/home/portfolio' ); ?>
     <?php get_template_part( 'template-parts/home/blog' ); ?>
     <?php get_template_part( 'template-parts/home/about' ); ?>
+    <?php get_template_part( 'template-parts/home/contact-cta' ); ?>
 </main>
 </div>
 
