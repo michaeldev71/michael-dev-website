@@ -59,3 +59,39 @@ function michael_dev_child_enqueue_home_header_assets() {
 }
 
 add_action( 'wp_enqueue_scripts', 'michael_dev_child_enqueue_home_header_assets', 20 );
+
+/**
+ * Remove o Header e o Footer visuais do Astra somente na página inicial.
+ * Mantém get_header(), get_footer() e os hooks globais do WordPress ativos.
+ */
+function michael_dev_child_hide_astra_chrome_on_front_page() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	$header_footer_builder_active = class_exists( 'Astra_Builder_Helper' )
+		&& Astra_Builder_Helper::$is_header_footer_builder_active;
+
+	if ( $header_footer_builder_active && class_exists( 'Astra_Builder_Header' ) ) {
+		$astra_header = Astra_Builder_Header::get_instance();
+
+		// Impede a renderização dos layouts desktop e mobile do Header Builder.
+		remove_action( 'astra_masthead', array( $astra_header, 'desktop_header' ), 10 );
+		remove_action( 'astra_mobile_header', array( $astra_header, 'mobile_header' ), 10 );
+	} else {
+		// Remove o template do Header primário da implementação legada.
+		remove_action( 'astra_masthead', 'astra_masthead_primary_template', 10 );
+	}
+
+	if ( $header_footer_builder_active && class_exists( 'Astra_Builder_Footer' ) ) {
+		$astra_footer = Astra_Builder_Footer::get_instance();
+
+		// Remove o layout visual do Footer Builder, sem remover wp_footer.
+		remove_action( 'astra_footer', array( $astra_footer, 'footer_markup' ), 10 );
+	} else {
+		// Remove o template visual do Footer da implementação legada.
+		remove_action( 'astra_footer', 'astra_footer_markup', 10 );
+	}
+}
+
+add_action( 'wp', 'michael_dev_child_hide_astra_chrome_on_front_page', 20 );
