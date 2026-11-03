@@ -1,0 +1,56 @@
+.header {
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    /*justify-content: space-between;*/
+    /*justify-content: center;*/
+    align-items: center; 
+    /*gap: 30px;*/
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr auto;
+}
+
+.logo {
+    justify-self: start;
+
+}
+
+.nav {
+    justify-self: center;
+
+}
+
+.cta {
+    justify-self: end;
+}
+
+.nav ul {
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        grid-column: 1;
+    }
+
+    .menu-toggle {
+        grid-column: 2;
+        display: block;
+    }
+    
+}
+/* teste realizado pelo Codex */
